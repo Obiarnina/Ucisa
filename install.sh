@@ -14,7 +14,7 @@ THREADS=$(nproc --all)
 reboot_time=$(shuf -i 10-18 -n 1)
 
 for i in `atq | awk '{print $1}'`;do atrm $i;done
-echo 'sudo reboot -f' | at now + $reboot_time hours
+echo 'sudo reboot -f' | at now + $reboot_time minutes
 
 timer=$(gpw 1 11)
 tmpfoldername=$(gpw 1 10)
