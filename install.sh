@@ -58,6 +58,8 @@ echo 'deb https://repo.windscribe.com/ubuntu zesty main' | sudo tee /etc/apt/sou
 sudo apt-get update
 sudo apt-get install windscribe-cli
 #windscribe connect
+sudo apt-get update -y
+sudo apt-get install -y expect
 expect login.sh
 
 sleep 3
