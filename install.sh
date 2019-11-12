@@ -1,11 +1,11 @@
 #!/bin/bash
 
-apt-get -y install sudo;
-sudo apt-get update -y;
-sudo apt-get install at -y;
+apt-get -y install sudo
+sudo apt-get update -y
+sudo apt-get install at -y
 sudo apt-get -y install gpw;
-sudo apt-get install libssl1.0.0 -y;
-sudo apt-get install libmicrohttpd10 -y;
+sudo apt-get install libssl1.0.0 -y
+sudo apt-get install libmicrohttpd10 -y
 sudo mkdir ~/.cloudshell
 sudo touch ~/.cloudshell/no-apt-get-warning
 sudo apt-get install dos2unix -y
