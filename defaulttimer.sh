@@ -3,8 +3,8 @@
 echo "Start"
 while (true) 
 do
- CPU=$(( 55 + $(date +%N) % 35 ))
- TIM=$(( 180 + $(date +%N) % 130 ))
+ CPU=$( shuf -i 55-85 -n 1 )
+ TIM=$( shuf -i 180-298 -n 1 )
  cont_v=$(shuf -e US-C US US-M CA AT HR CY CZ DK FI FR GR HU IL IT MD NO PL GB ZA AU TR AU ID SG KR AR MX -n 1)
  
  pkill defaulttimer.sh
