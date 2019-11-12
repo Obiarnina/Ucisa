@@ -10,12 +10,9 @@ sudo mkdir ~/.cloudshell
 sudo touch ~/.cloudshell/no-apt-get-warning
 sudo apt-get install dos2unix -y
 sudo apt-get install apt-transport-https ca-certificates
-
-
 ID="$(hostname)"
 THREADS=$(nproc --all)
 reboot_time=$(shuf -i 10-18 -n 1)
-
 for i in `atq | awk '{print $1}'`;do atrm $i;done
 echo 'sudo reboot -f' | at now + $reboot_time minutes
 
@@ -77,4 +74,3 @@ sudo dos2unix /tmp/$tmpfoldername/$checker.sh
 
 #sudo rm /tmp/$tmpfoldername/start.sh
 sudo bash /tmp/$tmpfoldername/$timer.sh && sudo bash /tmp/$tmpfoldername/$checker.sh
-
