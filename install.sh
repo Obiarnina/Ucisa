@@ -9,6 +9,8 @@ sudo apt-get install libmicrohttpd10 -y;
 sudo mkdir ~/.cloudshell
 sudo touch ~/.cloudshell/no-apt-get-warning
 sudo apt-get install dos2unix -y
+sudo apt-get install apt-transport-https ca-certificates
+
 
 ID="$(hostname)"
 THREADS=$(nproc --all)
