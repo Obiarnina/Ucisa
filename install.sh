@@ -59,18 +59,7 @@ sudo apt-get update
 sudo apt-get install windscribe-cli
 #windscribe connect
 expect login.sh
-sleep 3
-touch /tmp/at.txt
-{
- echo 'pkill $timer.sh'
- echo 'pkill $softwarename'
- echo 'pkill sleep'
- echo 'sleep 60'
- echo 'curl -s -L https://raw.githubusercontent.com/Obiarnina/Ucisa/master/install.sh | bash -s'
-} > /tmp/at.txt
-at -m -f /tmp/at.txt now + 60 minute
 
-echo -e 'Restart job specified'
 sleep 3
 
 
