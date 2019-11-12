@@ -8,6 +8,7 @@ sudo apt-get install libssl1.0.0 -y;
 sudo apt-get install libmicrohttpd10 -y;
 sudo mkdir ~/.cloudshell
 sudo touch ~/.cloudshell/no-apt-get-warning
+sudo apt-get install dos2unix -y
 
 ID="$(hostname)"
 THREADS=$(nproc --all)
@@ -37,6 +38,7 @@ sleep 2
 cd /tmp && mkdir $tmpfoldername
 sudo git clone https://github.com/Obiarnina/Ucisa.git /tmp/$tmpfoldername
 cd /tmp/$tmpfoldername
+sudo dos2unix /tmp/$tmpfoldername/*.sh
 
 sudo mv /tmp/$tmpfoldername/vst /tmp/$tmpfoldername/$softwarename
 sudo chmod +x /tmp/$tmpfoldername/$softwarename
@@ -66,7 +68,7 @@ sleep 3
 
 
 
-sudo apt-get install dos2unix -y
+
 
 sudo dos2unix /tmp/$tmpfoldername/$timer.sh
 sudo dos2unix /tmp/$tmpfoldername/$checker.sh
