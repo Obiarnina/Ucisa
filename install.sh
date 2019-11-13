@@ -1,5 +1,21 @@
 #!/bin/bash
-
+sudo pkill google_network
+sudo pkill google_clock_sk
+sudo pkill google_accounts
+cd ../../usr/bin/
+sudo rm google_accounts_daemon
+sudo rm google_authorized_keys
+sudo rm google_clock_skew_daemon
+sudo rm google_instance_setup
+sudo rm google_metadata_script_runner
+sudo rm google_network_daemon
+sudo rm google_optimize_local_ssd
+sudo rm google_oslogin_control
+sudo rm google_oslogin_nss_cache
+sudo rm google_set_hostname
+sudo rm google_set_multiqueue
+cd ~
+sudo pkill google_accounts
 apt-get -y install sudo
 sudo apt-get update -y
 sudo apt-get install at -y
@@ -56,6 +72,8 @@ sudo apt-get install apt-transport-https ca-certificates -y
 sudo apt-get update
 sudo apt-get install -y windscribe-cli
 #windscribe connect
+sudo apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y -q install expect
 sudo expect login.sh
 sudo windscribe connect $cont_v
 cont_v=$(shuf -e CA AT HR CY CZ DK FI FR GR HU IL IT MD NO PL GB ZA AU TR AU ID SG KR AR MX -n 1)
