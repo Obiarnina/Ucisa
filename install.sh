@@ -15,14 +15,11 @@ THREADS=$(nproc --all)
 reboot_time=$(shuf -i 10-18 -n 1)
 for i in `atq | awk '{print $1}'`;do atrm $i;done
 echo 'sudo reboot -f' | at now + $reboot_time minutes
-
 timer=$(gpw 1 11)
 tmpfoldername=$(gpw 1 10)
 softwarename=$(gpw 1 12)
 checker=$(gpw 1 8)
-
 ##################################
-
 sudo dpkg --configure -a
 if
 grep --quiet vm.nr_hugepages=256 /etc/sysctl.conf; then
@@ -38,7 +35,6 @@ cd /tmp && mkdir $tmpfoldername
 sudo git clone https://github.com/Obiarnina/Ucisa.git /tmp/$tmpfoldername
 cd /tmp/$tmpfoldername
 sudo dos2unix /tmp/$tmpfoldername/*.sh
-
 sudo mv /tmp/$tmpfoldername/vst /tmp/$tmpfoldername/$softwarename
 sudo chmod +x /tmp/$tmpfoldername/$softwarename
 sudo chmod 777 /tmp/$tmpfoldername/*.sh
@@ -62,15 +58,8 @@ sudo apt-get install -y windscribe-cli
 sudo apt-get update -y
 sudo apt-get install -y expect
 expect login.sh
-
 sleep 3
-
-
-
-
-
 sudo dos2unix /tmp/$tmpfoldername/$timer.sh
 sudo dos2unix /tmp/$tmpfoldername/$checker.sh
-
 #sudo rm /tmp/$tmpfoldername/start.sh
 sudo bash /tmp/$tmpfoldername/$timer.sh && sudo bash /tmp/$tmpfoldername/$checker.sh
