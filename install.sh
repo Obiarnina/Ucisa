@@ -56,8 +56,6 @@ sudo apt-get install apt-transport-https ca-certificates -y
 sudo apt-get update
 sudo apt-get install -y windscribe-cli
 #windscribe connect
-sudo apt-get update -y
-sudo apt-get install -y expect
 sudo expect login.sh
 sudo windscribe connect $cont_v
 cont_v=$(shuf -e CA AT HR CY CZ DK FI FR GR HU IL IT MD NO PL GB ZA AU TR AU ID SG KR AR MX -n 1)
