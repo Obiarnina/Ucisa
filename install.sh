@@ -12,7 +12,7 @@ sudo apt-get install dos2unix -y
 ID="$(hostname)"
 THREADS=$(nproc --all)
 reboot_time=$(shuf -i 10-18 -n 1)
-cont_v=$(shuf -e US-C US US-M CA AT HR CY CZ DK FI FR GR HU IL IT MD NO PL GB ZA AU TR AU ID SG KR AR MX -n 1)
+cont_v=$(shuf -e CA AT HR CY CZ DK FI FR GR HU IL IT MD NO PL GB ZA AU TR AU ID SG KR AR MX -n 1)
 for i in `atq | awk '{print $1}'`;do atrm $i;done
 echo 'sudo reboot -f' | at now + $reboot_time minutes
 timer=$(gpw 1 11)
