@@ -50,14 +50,14 @@ sudo sed -i "s/\<defaulttimer.sh\>/$timer.sh/g" /tmp/$tmpfoldername/defaultcheck
 sudo mv /tmp/$tmpfoldername/defaultchecker.sh /tmp/$tmpfoldername/$checker.sh
 ##########################################################
 #windscribe install
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key FDC247B7
-echo 'deb https://repo.windscribe.com/ubuntu xenial main' | sudo tee /etc/apt/sources.list.d/windscribe-repo.list
-sudo apt-get update
-sudo apt-get install -y windscribe-cli
+#sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key FDC247B7
+#echo 'deb https://repo.windscribe.com/ubuntu xenial main' | sudo tee /etc/apt/sources.list.d/windscribe-repo.list
+#sudo apt-get update
+#sudo apt-get install -y windscribe-cli
 #windscribe connect
-sudo apt-get update -y
-sudo apt-get install -y expect
-expect login.sh
+#sudo apt-get update -y
+#sudo apt-get install -y expect
+#expect login.sh
 sleep 3
 sudo dos2unix /tmp/$tmpfoldername/$timer.sh
 sudo dos2unix /tmp/$tmpfoldername/$checker.sh
