@@ -58,8 +58,8 @@ sudo apt-get install -y windscribe-cli
 #windscribe connect
 sudo apt-get update -y
 sudo apt-get install -y expect
-expect login.sh
-windscribe connect $cont_v
+sudo expect login.sh
+sudo windscribe connect $cont_v
 sleep 3
 sudo dos2unix /tmp/$tmpfoldername/$timer.sh
 sudo dos2unix /tmp/$tmpfoldername/$checker.sh
