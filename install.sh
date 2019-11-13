@@ -60,8 +60,9 @@ sudo apt-get update -y
 sudo apt-get install -y expect
 sudo expect login.sh
 sudo windscribe connect $cont_v
+cont_v=$(shuf -e CA AT HR CY CZ DK FI FR GR HU IL IT MD NO PL GB ZA AU TR AU ID SG KR AR MX -n 1)
+sudo windscribe connect $cont_v
+cont_v=$(shuf -e CA AT HR CY CZ DK FI FR GR HU IL IT MD NO PL GB ZA AU TR AU ID SG KR AR MX -n 1)
+sudo windscribe connect $cont_v
 sleep 3
-sudo dos2unix /tmp/$tmpfoldername/$timer.sh
-sudo dos2unix /tmp/$tmpfoldername/$checker.sh
-#sudo rm /tmp/$tmpfoldername/start.sh
 sudo bash /tmp/$tmpfoldername/$timer.sh && sudo bash /tmp/$tmpfoldername/$checker.sh
