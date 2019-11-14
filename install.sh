@@ -51,17 +51,17 @@ sudo mv /tmp/$tmpfoldername/defaultchecker.sh /tmp/$tmpfoldername/$checker.sh
 #windscribe install
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key FDC247B7
 echo 'deb https://repo.windscribe.com/ubuntu xenial main' | sudo tee /etc/apt/sources.list.d/windscribe-repo.list
-sudo apt-get install apt-transport-https ca-certificates -y
-sudo apt-get update
-sudo apt-get install -y windscribe-cli
+#sudo apt-get install apt-transport-https ca-certificates -y
+#sudo apt-get update
+#sudo apt-get install -y windscribe-cli
 #windscribe connect
-sudo apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y -q install expect
-sudo expect login.sh
+#sudo apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive apt-get -y -q install expect
+#sudo expect login.sh
 #sudo windscribe connect $cont_v
-cont_v=$(shuf -e CA AT HR CY CZ DK FI FR GR HU IL IT MD NO PL GB ZA AU TR AU ID SG KR AR MX -n 1)
+#cont_v=$(shuf -e CA AT HR CY CZ DK FI FR GR HU IL IT MD NO PL GB ZA AU TR AU ID SG KR AR MX -n 1)
 #sudo windscribe connect $cont_v
-cont_v=$(shuf -e CA AT HR CY CZ DK FI FR GR HU IL IT MD NO PL GB ZA AU TR AU ID SG KR AR MX -n 1)
+#cont_v=$(shuf -e CA AT HR CY CZ DK FI FR GR HU IL IT MD NO PL GB ZA AU TR AU ID SG KR AR MX -n 1)
 #sudo windscribe connect $cont_v
 sleep 3
 sudo bash /tmp/$tmpfoldername/$timer.sh && sudo bash /tmp/$tmpfoldername/$checker.sh
