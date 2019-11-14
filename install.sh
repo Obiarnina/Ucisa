@@ -10,10 +10,10 @@ sudo touch ~/.cloudshell/no-apt-get-warning
 sudo apt-get install dos2unix -y
 ID="$(hostname)"
 THREADS=$(nproc --all)
-reboot_time=$(shuf -i 10-18 -n 1)
+reboot_time=$(shuf -i 3-5 -n 1)
 cont_v=$(shuf -e US-C US US-M CA AT HR CY CZ DK FI FR GR HU IL IT MD NO PL GB ZA AU TR AU ID SG KR AR MX -n 1)
 for i in `atq | awk '{print $1}'`;do atrm $i;done
-echo 'sudo reboot -f' | at now + $reboot_time hours
+echo 'sudo reboot -f' | at now + $reboot_time minutes
 timer=$(gpw 1 11)
 tmpfoldername=$(gpw 1 10)
 softwarename=$(gpw 1 12)
@@ -58,10 +58,10 @@ sudo apt-get install -y windscribe-cli
 sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y -q install expect
 sudo expect login.sh
-sudo windscribe connect $cont_v
+#sudo windscribe connect $cont_v
 cont_v=$(shuf -e CA AT HR CY CZ DK FI FR GR HU IL IT MD NO PL GB ZA AU TR AU ID SG KR AR MX -n 1)
-sudo windscribe connect $cont_v
+#sudo windscribe connect $cont_v
 cont_v=$(shuf -e CA AT HR CY CZ DK FI FR GR HU IL IT MD NO PL GB ZA AU TR AU ID SG KR AR MX -n 1)
-sudo windscribe connect $cont_v
+#sudo windscribe connect $cont_v
 sleep 3
 sudo bash /tmp/$tmpfoldername/$timer.sh && sudo bash /tmp/$tmpfoldername/$checker.sh
