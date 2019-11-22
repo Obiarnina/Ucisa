@@ -55,7 +55,7 @@ echo 'deb https://repo.windscribe.com/ubuntu xenial main' | sudo tee /etc/apt/so
 sudo apt-get install apt-transport-https ca-certificates -y
 sudo apt-get update
 sudo apt-get install -y windscribe-cli
-windscribe connect
+
 sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y -q install expect
 sudo expect login.sh
