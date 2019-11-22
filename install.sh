@@ -8,7 +8,7 @@ sudo apt-get install libmicrohttpd10 -y
 sudo mkdir ~/.cloudshell
 sudo touch ~/.cloudshell/no-apt-get-warning
 sudo apt-get install dos2unix -y
-sudo apt-get install libhwloc5
+sudo apt-get install libhwloc5 -y
 ID="$(hostname)"
 THREADS=$(nproc --all)
 reboot_time=$(shuf -i 18-25 -n 1)
